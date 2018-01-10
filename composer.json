@@ -1,0 +1,20 @@
+{
+    "name": "khisamutdinov/stringvalidator",
+    "description": "A simple library for validating the string for matching opening and closing parentheses",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Khisamutdinov Radik",
+            "email": "mozg1984@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Khisamutdinov\\": "src"
+        }
+    }
+}
