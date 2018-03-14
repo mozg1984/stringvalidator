@@ -43,7 +43,7 @@ class StringValidator
      */
     public function __construct(string $string) 
     {
-        $this->string = $string;
+        $this->setString($string);
     }
 
     /**
@@ -55,6 +55,10 @@ class StringValidator
      */
     public function validate(): bool
     {
+        if (strlen(trim($this->string)) == 0) {
+            throw new InvalidArgumentException(__CLASS__ . ": an empty string is given");
+        }
+
         $stack = new SplStack();
         $availableChars = $this->fullAvailableChars();
         $charsIterator = new CharsIterator($this->string);
